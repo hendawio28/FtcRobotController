@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode.mechanisims;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -10,7 +11,7 @@ public class TestBenchDcMotor {
 
     public void init(HardwareMap hwMap) {
 
-        // DC Motor?*/
+        // DC Motor?
         motor =hwMap.get(DcMotor .class,"motor"); //Basically same notes as for touchSensor
         motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);// This makes it so motor is most accurate other good types exist though.
         ticksPerRev = motor.getMotorType().getTicksPerRev();
@@ -21,13 +22,14 @@ public class TestBenchDcMotor {
     }
     public double getMotorRevs(){
         return motor.getCurrentPosition()/ ticksPerRev;
-        /*
+
         Dividing how many ticks motor has spun by how many ticks in a revolution to get the number
         of revolutions this changes if you have a gear ratio
-         */
+
     }
     public void setMotorZeroBehavior(DcMotor.ZeroPowerBehavior zeroBehavior) {
         motor.setZeroPowerBehavior(zeroBehavior);
     }
 
 }
+*/

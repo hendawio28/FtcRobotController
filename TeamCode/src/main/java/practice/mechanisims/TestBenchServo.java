@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode.mechanisims;
 //import com.qualcomm.robotcore.hardware.CRServo Because we don't actually have rotating servo
 import com.qualcomm.robotcore.hardware.CRServo;
@@ -30,5 +31,6 @@ public class TestBenchServo {
     public void setServoRot(double power) {
         servoRot.setPower(power);
         }
-     */
+
 }
+*/

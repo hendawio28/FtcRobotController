@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
@@ -23,11 +24,11 @@ public class IfPractice extends OpMode {
         /*
         1. Make a turbo button. If the a button is NOT pressed, multiply the motor speed by 0.5
         otherwise use the standard speed
-         */
+
     }
 
 }
-/*
+
 And - &&: if (leftY< 0.5 && leftY >0)
 OR ||: if (leftY<0 || rightY<0)
 NOT !: if(!clawClosed)

@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
@@ -14,9 +15,10 @@ public class HelloWorld extends OpMode {
 
     @Override
     public void loop() {
-    /*
-    1. Hello:World, change the telemetary data to display your name
-    2. Run code in Autonomous instead of Teleop
-     */
+
+    // 1. Hello:World, change the telemetary data to display your name
+    // 2. Run code in Autonomous instead of Teleop
+
     }
 }
+*/

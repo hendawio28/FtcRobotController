@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
@@ -27,6 +28,7 @@ public class VariablePractice extends OpMode {
         1. change the String variable "name" to your team name.
         2. create an int variable called "motorAngle" and store an angle between 0-180. display this in your innit method
 
-         */
+
     }
 }
+*/

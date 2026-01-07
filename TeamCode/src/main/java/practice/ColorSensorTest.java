@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
@@ -22,3 +23,4 @@ public class ColorSensorTest extends OpMode {
         telemetry.addData("Detected Color", detectedColor);
     }
 }
+*/

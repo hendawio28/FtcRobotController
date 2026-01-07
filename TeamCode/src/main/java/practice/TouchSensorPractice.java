@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
@@ -23,5 +24,6 @@ public class TouchSensorPractice extends OpMode {
      if the touch sensor is not being pressed
     2. in your telemetry OpMode, have the telemetry display "Pressed" and "Not Pressed" instead of
     true and false
-     */
+
 }
+*/

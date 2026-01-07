@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
@@ -34,6 +35,7 @@ public class GamePadPractice extends OpMode {
         2. add telemetry for the B button
         3. add telemetry data to report the DIFFERENCE between X left joystick and X right joystick.
         4. add telemetry data to report the SUM of both rear triggers.
-         */
+
     }
 }
+*/

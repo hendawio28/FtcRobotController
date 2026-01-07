@@ -1,3 +1,4 @@
+/*
 package org.firstinspires.ftc.teamcode.mechanisims;
 
 import com.qualcomm.robotcore.hardware.HardwareMap;
@@ -37,7 +38,7 @@ public class TestBenchColorSensor {
         red, green, blue
         GREEN = <0.25, >0.75, <0.6
         Purple = >0.9, >0.9 >0.9
-         */
+
         if (normRed < 0.25 && normGreen > 0.75 && normBlue < 0.6) {
             return DetectedColor.GREEN;
         } else if (normRed > 0.9 && normGreen > 0.9 && normBlue > 0.9) {
@@ -47,3 +48,4 @@ public class TestBenchColorSensor {
         }
     }
 }
+*/
