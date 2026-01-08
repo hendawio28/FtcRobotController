@@ -6,6 +6,8 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.IMU;
 
+import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
+
 public class MecanumDrive {
     private DcMotor frontLeftMotor, backLeftMotor, frontRightMotor, backRightMotor;
     private IMU imu;
@@ -50,8 +52,23 @@ public class MecanumDrive {
         frontRightMotor.setPower(maxSpeed * (frontRightPower / maxPower));
         backRightMotor.setPower(maxSpeed * (backRightPower / maxPower));
     }
-
+    public void reset(boolean relocalize) {
+        if (relocalize) {
+            imu.resetYaw();
+        }
+    }
+    double botheading = imu.getRobotYawPitchRollAngles().getYaw(AngleUnit.RADIANS);
     public void fieldOrientadedDrive(double forward, double strafe, double rotate) {
-        
+//        Brogan M. Patt's Way
+//        double theta = Math.atan2(forward, strafe);
+//        double r = Math.hypot(strafe, forward);
+//
+//        theta = AngleUnit.normalizeRadians(theta - imu.getRobotYawPitchRollAngles().getYaw(AngleUnit.RADIANS));
+//
+//        double newForward = r * Math.sin(theta);
+//        double newStrafe = r * Math.cos(theta);
+            double newForward = forward * Math.sin(-botheading) +
+
+        this.drive(newForward, newStrafe, rotate);
     }
 }
