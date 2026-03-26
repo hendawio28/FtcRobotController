@@ -33,12 +33,8 @@ public class Spindexer {
             targetPosition += nextPosition;
         }
         spindexerMotor.setTargetPosition(targetPosition);
-        if (currentPosition < targetPosition) {
-            spindexerMotor.setPower(0.3);
-        }
-        else {
-            spindexerMotor.setPower(0.0);
-        }
+
+        spindexerMotor.setPower(0.3);
         lastModeChange = modeChange;
         lastPositionChange = posiitonChange;
     }
