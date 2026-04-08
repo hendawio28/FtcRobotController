@@ -5,23 +5,27 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.Mechanisms.Intake;
 import org.firstinspires.ftc.teamcode.Mechanisms.MecanumDrive;
-import org.firstinspires.ftc.teamcode.Mechanisms.Spindexer;
+import org.firstinspires.ftc.teamcode.Mechanisms.Indexer;
 
 @TeleOp
 public class Teleop  extends OpMode {
     MecanumDrive mecanumDrive = new MecanumDrive();
     Intake intake = new Intake();
-    Spindexer spindexer = new Spindexer();
-
+    Indexer indexer = new Indexer();
+    private double lastTime;
+    private boolean shoot, spin_for_intake, intakeOn, intakeWasOn= false;
     @Override
     public void init() {
         mecanumDrive.init(hardwareMap);
         intake.init(hardwareMap);
-        spindexer.init(hardwareMap);
+        indexer.init(hardwareMap);
     }
 
     @Override
     public void loop() {
+        //Time
+        double time = getRuntime();
+
         ////Driving Code:
         //Assigning Variables
         double forward = -gamepad1.left_stick_y;
@@ -38,13 +42,23 @@ public class Teleop  extends OpMode {
         //Actual Intake
         intake.intake(intakeSpeed);
 
-        ////Spindexer Code
+        ////Indexer Code
 
         //Assigning Variables
-        boolean changeMode = gamepad1.left_bumper;
-        boolean changePosition = gamepad1.right_bumper;
+        shoot = gamepad1.rightBumperWasPressed();
+        intakeOn = intakeSpeed >= 0.3;
+        if (intakeOn && !intakeWasOn) {
+            spin_for_intake = true;
+            lastTime = time;
+        } else if (time >= lastTime+1.5 && intakeOn) {
+            spin_for_intake = true;
+            lastTime = time;
+        }
+        else {
+            spin_for_intake = false;
+        }
 
-        //Actual Spindexing
-        spindexer.spin(changeMode, changePosition);
+        indexer.autoSpin(shoot, spin_for_intake);
+        intakeWasOn = intakeOn;
     }
 }
